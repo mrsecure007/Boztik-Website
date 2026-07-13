@@ -758,3 +758,288 @@ footer {
 
 
 }
+/* =========================================
+   V1.1.0 PREVIEW FEATURES
+========================================= */
+
+.preview-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-top:45px;
+
+}
+
+.preview-item{
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(12px);
+
+}
+
+.preview-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 18px 45px rgba(140,255,63,.15);
+
+}
+
+.preview-item h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+.preview-item p{
+
+    color:var(--text-muted);
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+/* =========================================
+   EXTENSION PREVIEW IMAGE
+========================================= */
+
+.feature-preview{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:24px;
+
+    border:1px solid rgba(140,255,63,.15);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45),
+        0 0 40px rgba(140,255,63,.08);
+
+    transition:.4s ease;
+
+}
+
+.feature-preview:hover{
+
+    transform:translateY(-8px) scale(1.01);
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.55),
+        0 0 55px rgba(140,255,63,.18);
+
+}
+
+.preview-window{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.preview-window::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    pointer-events:none;
+
+}
+
+.preview-window::after{
+
+    content:"Boztik Creative Toolkit v1.1.0";
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:rgba(7,10,9,.85);
+
+    color:var(--primary);
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    border:1px solid rgba(140,255,63,.2);
+
+    backdrop-filter:blur(10px);
+
+}
+/* =========================================
+   DOWNLOAD SECTION V1.1.0
+========================================= */
+
+.download-note{
+
+    margin-top:30px;
+
+}
+
+.download-note p{
+
+    color:var(--text-muted);
+
+    font-size:15px;
+
+    letter-spacing:.3px;
+
+}
+
+.download-card .hero-buttons{
+
+    justify-content:center;
+
+    margin-top:35px;
+
+}
+
+.download-card{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.download-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(140,255,63,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-120px;
+
+    filter:blur(40px);
+
+}
+
+.download-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:rgba(140,255,63,.05);
+
+    border-radius:50%;
+
+    bottom:-100px;
+
+    left:-100px;
+
+    filter:blur(35px);
+
+}
+
+.download-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/* =========================================
+   BUTTON IMPROVEMENTS
+========================================= */
+
+.btn-primary{
+
+    box-shadow:0 12px 30px rgba(140,255,63,.25);
+
+}
+
+.btn-primary:hover{
+
+    box-shadow:0 20px 45px rgba(140,255,63,.35);
+
+}
+
+.btn-secondary:hover{
+
+    box-shadow:0 15px 35px rgba(140,255,63,.15);
+
+}
+
+
+/* =========================================
+   RESPONSIVE ADDITIONS
+========================================= */
+
+@media(max-width:900px){
+
+    .preview-features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .preview-window{
+
+        padding:15px;
+
+    }
+
+    .download-note p{
+
+        line-height:1.8;
+
+    }
+
+}
