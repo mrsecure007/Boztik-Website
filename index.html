@@ -135,7 +135,7 @@ Features
 
 <a href="#assistant">
 
-AI Assistant
+AI Creative Assistant
 
 </a>
 
@@ -587,13 +587,13 @@ COMING SOON
 
 <h2>
 
-Meet the AI Creative Assistant
+AI Creative Assistant
 
 </h2>
 
 <p>
 
-A thoughtful new companion for creators, designed to support idea generation, editing workflows, photography questions, and everyday productivity without disrupting your process.
+The AI Creative Assistant will become your intelligent creative companion inside Boztik Creative Toolkit. It will help photographers, designers and content creators work faster by providing AI-powered creative tools directly inside the browser.
 
 </p>
 
@@ -607,65 +607,49 @@ A thoughtful new companion for creators, designed to support idea generation, ed
 
 <h3>
 
-Built to help you think faster and create with more confidence.
+Smarter ideas, faster workflows, and calmer creative sessions.
 
 </h3>
 
 <p>
 
-The upcoming assistant will help you move from concept to execution with practical suggestions, creative prompts, and workflow support tailored to photography and design tasks.
+From AI prompt generation to image analysis and smart editing suggestions, the assistant will bring practical creative support straight into the browser.
 
 </p>
 
 <div class="assistant-actions">
 
-<a href="https://chromewebstore.google.com/detail/boztik-creative-toolkit/maaebbajegilfcpmljlpcclebdpngign" target="_blank" rel="noopener" class="primary-button">Install Boztik</a>
-
-<a href="#support" class="secondary-button">Support the journey</a>
+<button type="button" class="primary-button assistant-cta-button">More AI Features Coming Soon</button>
 
 </div>
 
 </div>
 
-<div class="assistant-grid">
+<div class="assistant-feature-list">
 
-<div class="assistant-card">
+<div class="assistant-feature-card">
 
-<div class="assistant-icon">💡</div>
+<h4>Upcoming Features</h4>
 
-<h4>Creative ideas</h4>
+<ul>
 
-<p>Generate fresh concepts and explore new directions for your next project.</p>
+<li>AI Prompt Generator</li>
 
-</div>
+<li>Image Analysis</li>
 
-<div class="assistant-card">
+<li>Editing Suggestions</li>
 
-<div class="assistant-icon">🖼️</div>
+<li>Social Media Caption Generator</li>
 
-<h4>Photoshop support</h4>
+<li>Color &amp; Design Inspiration</li>
 
-<p>Get help with editing approaches, workflow suggestions, and practical next steps.</p>
+<li>Workflow Assistant</li>
 
-</div>
+<li>Creative Brainstorming</li>
 
-<div class="assistant-card">
+<li>Future integrations with leading AI providers</li>
 
-<div class="assistant-icon">🎬</div>
-
-<h4>Editing techniques</h4>
-
-<p>Explore clearer ways to refine style, polish execution, and speed up repetitive tasks.</p>
-
-</div>
-
-<div class="assistant-card">
-
-<div class="assistant-icon">📸</div>
-
-<h4>Photography guidance</h4>
-
-<p>Ask questions about composition, color, lighting, and creative decision-making.</p>
+</ul>
 
 </div>
 
@@ -1076,6 +1060,24 @@ Designed and Developed by Boztik.
 </div>
 
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const revealItems = Array.from(document.querySelectorAll('.reveal'));
+    const revealOnScroll = () => {
+      const triggerPoint = window.innerHeight - 90;
+      revealItems.forEach((item) => {
+        const itemTop = item.getBoundingClientRect().top;
+        if (itemTop < triggerPoint) {
+          item.classList.add('is-visible');
+        }
+      });
+    };
+    revealOnScroll();
+    window.addEventListener('scroll', revealOnScroll, { passive: true });
+    window.addEventListener('resize', revealOnScroll);
+  });
+</script>
 
 </body>
 
