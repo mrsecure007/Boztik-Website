@@ -1747,6 +1747,12 @@ footer p{
 
 }
 
+.privacy-page .hero.reveal{
+
+    transform:none;
+
+}
+
 .reveal.is-visible{
 
     opacity:1;
