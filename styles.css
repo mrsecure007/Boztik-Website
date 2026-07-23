@@ -385,6 +385,118 @@ header{
     letter-spacing:.2px;
 
 }
+
+.scroll-hint{
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:26px;
+
+    color:var(--text-muted);
+
+    font-size:13px;
+
+    letter-spacing:0.2em;
+
+    text-transform:uppercase;
+
+    opacity:0;
+
+    animation:fadeIn 0.8s ease forwards;
+
+    animation-delay:1s;
+
+}
+
+.scroll-arrow{
+
+    width:14px;
+
+    height:14px;
+
+    border-left:2px solid var(--text-muted);
+
+    border-bottom:2px solid var(--text-muted);
+
+    transform:rotate(45deg);
+
+    animation:scrollArrow 1.4s ease-in-out infinite;
+
+}
+
+@keyframes scrollArrow{
+
+    0%, 70%, 100%{
+
+        transform:translateY(0) rotate(45deg);
+
+        opacity:.85;
+
+    }
+
+    50%{
+
+        transform:translateY(5px) rotate(45deg);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(6px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes scrollArrow{
+
+    0%, 40%{
+
+        transform:translateY(0) rotate(45deg);
+
+        opacity:.8;
+
+    }
+
+    50%{
+
+        transform:translateY(6px) rotate(45deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(0) rotate(45deg);
+
+        opacity:.8;
+
+    }
+
+}
 /* =========================================
    BUTTONS
 ========================================= */
@@ -1977,9 +2089,23 @@ footer p{
 
         flex-direction:column;
 
-        gap:25px;
+        gap:18px;
 
         text-align:center;
+
+        padding:16px 22px;
+
+    }
+
+    .logo-area span{
+
+        font-size:20px;
+
+    }
+
+    .logo-subtitle{
+
+        font-size:11px;
 
     }
 
@@ -1989,25 +2115,89 @@ footer p{
 
         justify-content:center;
 
-        gap:18px;
+        gap:16px;
 
     }
 
     .hero{
 
-        padding:70px 25px 60px;
+        padding:60px 20px 40px;
+
+    }
+
+    .hero-badge{
+
+        margin-bottom:20px;
+
+        padding:8px 16px;
 
     }
 
     .hero h1{
 
-        font-size:46px;
+        font-size:44px;
+
+    }
+
+    .hero h1 span{
+
+        margin-top:8px;
 
     }
 
     .hero p{
 
-        font-size:17px;
+        font-size:16px;
+
+        max-width:100%;
+
+    }
+
+    .hero-buttons{
+
+        margin-top:32px;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .scroll-hint{
+
+        display:flex;
+
+    }
+
+    .trust-row{
+
+        margin-top:20px;
+
+        justify-content:center;
+
+    }
+
+    .trust-pill{
+
+        padding:8px 14px;
+
+    }
+
+    .hero-image{
+
+        padding:20px;
+
+    }
+
+    .hero-image::before{
+
+        inset:16px;
+
+    }
+
+    .hero-logo{
+
+        width:240px;
 
     }
 
@@ -2065,14 +2255,6 @@ footer p{
 
     }
 
-    .hero-buttons{
-
-        flex-direction:column;
-
-        align-items:center;
-
-    }
-
     .workflow-card{
 
         padding:28px 22px;
@@ -2092,6 +2274,112 @@ footer p{
         width:100%;
 
         max-width:320px;
+
+        min-width:0;
+
+        padding:14px 24px;
+
+    }
+
+}
+
+@media (max-width:430px){
+
+    .navbar{
+
+        padding:12px 18px;
+
+    }
+
+    .logo-area span{
+
+        font-size:18px;
+
+    }
+
+    .logo-subtitle{
+
+        font-size:10px;
+
+    }
+
+    .nav-links{
+
+        gap:12px;
+
+    }
+
+    .hero{
+
+        padding:52px 18px 32px;
+
+    }
+
+    .hero-badge{
+
+        margin-bottom:16px;
+
+        padding:8px 14px;
+
+    }
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    .hero p{
+
+        font-size:15px;
+
+        line-height:1.6;
+
+    }
+
+    .hero-buttons{
+
+        gap:14px;
+
+    }
+
+    .hero-image{
+
+        padding:16px;
+
+    }
+
+    .hero-logo{
+
+        width:200px;
+
+    }
+
+    .scroll-hint{
+
+        display:flex;
+
+    }
+
+    .trust-row{
+
+        gap:10px;
+
+    }
+
+    .trust-pill{
+
+        padding:8px 12px;
+
+        font-size:13px;
+
+    }
+
+    .primary-button,
+
+    .secondary-button{
+
+        padding:14px 20px;
 
     }
 
